@@ -17,7 +17,7 @@ package org.openmrs.contrib.dwr.dwrp;
 
 import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 import org.openmrs.contrib.dwr.WebContext;
 import org.openmrs.contrib.dwr.WebContextFactory;

@@ -18,8 +18,8 @@ package org.openmrs.contrib.dwr.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.openmrs.contrib.dwr.extend.Handler;
 import org.openmrs.contrib.dwr.extend.Remoter;
@@ -33,7 +33,7 @@ import org.openmrs.contrib.dwr.util.MimeConstants;
 public class InterfaceHandler implements Handler
 {
     /* (non-Javadoc)
-     * @see org.directwebremoting.Handler#handle(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
+     * @see org.directwebremoting.Handler#handle(jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse)
      */
     public void handle(HttpServletRequest request, HttpServletResponse response) throws IOException
     {

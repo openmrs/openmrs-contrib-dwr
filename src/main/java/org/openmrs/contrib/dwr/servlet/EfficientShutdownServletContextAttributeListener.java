@@ -17,8 +17,8 @@ package org.openmrs.contrib.dwr.servlet;
 
 import java.util.List;
 
-import javax.servlet.ServletContextAttributeEvent;
-import javax.servlet.ServletContextAttributeListener;
+import jakarta.servlet.ServletContextAttributeEvent;
+import jakarta.servlet.ServletContextAttributeListener;
 
 import org.openmrs.contrib.dwr.extend.ServerLoadMonitor;
 import org.openmrs.contrib.dwr.impl.ContainerUtil;
@@ -31,14 +31,14 @@ import org.openmrs.contrib.dwr.impl.ContainerUtil;
 public class EfficientShutdownServletContextAttributeListener implements ServletContextAttributeListener
 {
     /* (non-Javadoc)
-     * @see javax.servlet.ServletContextAttributeListener#attributeAdded(javax.servlet.ServletContextAttributeEvent)
+     * @see jakarta.servlet.ServletContextAttributeListener#attributeAdded(jakarta.servlet.ServletContextAttributeEvent)
      */
     public void attributeAdded(ServletContextAttributeEvent ev)
     {
     }
 
     /* (non-Javadoc)
-     * @see javax.servlet.ServletContextAttributeListener#attributeRemoved(javax.servlet.ServletContextAttributeEvent)
+     * @see jakarta.servlet.ServletContextAttributeListener#attributeRemoved(jakarta.servlet.ServletContextAttributeEvent)
      */
     public void attributeRemoved(ServletContextAttributeEvent ev)
     {
@@ -50,7 +50,7 @@ public class EfficientShutdownServletContextAttributeListener implements Servlet
     }
 
     /* (non-Javadoc)
-     * @see javax.servlet.ServletContextAttributeListener#attributeReplaced(javax.servlet.ServletContextAttributeEvent)
+     * @see jakarta.servlet.ServletContextAttributeListener#attributeReplaced(jakarta.servlet.ServletContextAttributeEvent)
      */
     public void attributeReplaced(ServletContextAttributeEvent ev)
     {

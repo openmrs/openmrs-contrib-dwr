@@ -18,7 +18,8 @@ package org.openmrs.contrib.dwr.util;
 import java.io.IOException;
 import java.io.Writer;
 
-import javax.servlet.ServletOutputStream;
+import jakarta.servlet.ServletOutputStream;
+import jakarta.servlet.WriteListener;
 
 /**
  * This is not the evil hack you are looking for.
@@ -47,11 +48,21 @@ public final class WriterOutputStream extends ServletOutputStream
     }
 
     /* (non-Javadoc)
-     * @see javax.servlet.ServletOutputStream#print(java.lang.String)
+     * @see jakarta.servlet.ServletOutputStream#print(java.lang.String)
      */
     public void print(String s) throws IOException
     {
         writer.write(s);
+    }
+
+    @Override
+    public boolean isReady() {
+        return true;
+    }
+
+    @Override
+    public void setWriteListener(WriteListener writeListener) {
+
     }
 
     /* (non-Javadoc)

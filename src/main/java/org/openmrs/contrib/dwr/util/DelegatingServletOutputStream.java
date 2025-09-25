@@ -19,7 +19,8 @@ package org.openmrs.contrib.dwr.util;
 import java.io.IOException;
 import java.io.OutputStream;
 
-import javax.servlet.ServletOutputStream;
+import jakarta.servlet.ServletOutputStream;
+import jakarta.servlet.WriteListener;
 
 /**
  * Delegating implementation of ServletOutputStream.
@@ -59,6 +60,16 @@ public class DelegatingServletOutputStream extends ServletOutputStream
     {
         super.flush();
         proxy.flush();
+    }
+
+    @Override
+    public boolean isReady() {
+        return false;
+    }
+
+    @Override
+    public void setWriteListener(WriteListener writeListener) {
+
     }
 
     /* (non-Javadoc)

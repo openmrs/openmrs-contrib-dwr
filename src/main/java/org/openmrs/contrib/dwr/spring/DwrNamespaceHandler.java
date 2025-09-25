@@ -169,7 +169,7 @@ public class DwrNamespaceHandler extends NamespaceHandlerSupport
                 BeanDefinitionBuilder beanFilter;
                 try
                 {
-                    beanFilter = BeanDefinitionBuilder.rootBeanDefinition(ClassUtils.forName(filterClass));
+                    beanFilter = BeanDefinitionBuilder.rootBeanDefinition(ClassUtils.forName(filterClass, getClass().getClassLoader()));
                 }
                 catch (ClassNotFoundException e)
                 {
@@ -273,7 +273,7 @@ public class DwrNamespaceHandler extends NamespaceHandlerSupport
                 String aliasName = element.getAttribute("name");
                 if (StringUtils.hasText(aliasName))
                 {
-                    aliases = StringUtils.tokenizeToStringArray(nameAttr, BeanDefinitionParserDelegate.BEAN_NAME_DELIMITERS);
+                    aliases = StringUtils.tokenizeToStringArray(nameAttr, BeanDefinitionParserDelegate.MULTI_VALUE_ATTRIBUTE_DELIMITERS);
                 }
             }
 
@@ -336,7 +336,7 @@ public class DwrNamespaceHandler extends NamespaceHandlerSupport
                                                  "'. " + "Check your bean has a correctly configured parent or provide a class for " + 
                                                  " the bean definition");
                 }
-                beanCreator.addPropertyValue("beanClass", ClassUtils.forName(beanClassName));
+                beanCreator.addPropertyValue("beanClass", ClassUtils.forName(beanClassName, getClass().getClassLoader()));
             }
             catch (ClassNotFoundException e)
             {

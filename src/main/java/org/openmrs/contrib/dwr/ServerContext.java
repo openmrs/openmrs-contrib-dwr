@@ -17,8 +17,8 @@ package org.openmrs.contrib.dwr;
 
 import java.util.Collection;
 
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
 
 /**
  * @author Joe Walker [joe at getahead dot ltd dot uk]

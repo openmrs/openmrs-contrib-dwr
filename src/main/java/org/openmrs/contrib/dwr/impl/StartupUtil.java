@@ -15,18 +15,15 @@
  */
 package org.openmrs.contrib.dwr.impl;
 
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.http.HttpServlet;
 
 import org.openmrs.contrib.dwr.Container;
 import org.openmrs.contrib.dwr.ServerContextFactory;
 import org.openmrs.contrib.dwr.WebContextFactory;
 import org.openmrs.contrib.dwr.ServerContextFactory.ServerContextBuilder;
 import org.openmrs.contrib.dwr.WebContextFactory.WebContextBuilder;
-import org.openmrs.contrib.dwr.util.FakeServletConfig;
-import org.openmrs.contrib.dwr.util.FakeServletContext;
 import org.openmrs.contrib.dwr.util.Logger;
 import org.openmrs.contrib.dwr.util.ServletLoggingOutput;
 import org.openmrs.contrib.dwr.util.VersionUtil;
@@ -37,61 +34,6 @@ import org.openmrs.contrib.dwr.util.VersionUtil;
  */
 public class StartupUtil
 {
-    /**
-     * A way to setup DWR outside of any Containers.
-     * This method can also serve as a template for in container code wanting
-     * to get DWR setup. Callers of this method should clean up after themselves
-     * by calling {@link #outOfContainerDestroy(Container)}
-     * @return A new initialized container.
-     * @throws ServletException If the setup fails.
-     */
-    public Container outOfContainerInit() throws ServletException
-    {
-        try
-        {
-            ServletConfig servletConfig = new FakeServletConfig("test", new FakeServletContext());
-            ServletContext servletContext = servletConfig.getServletContext();
-
-            StartupUtil.setupLogging(servletConfig, null);
-            StartupUtil.logStartup(servletConfig);
-
-            DefaultContainer container = ContainerUtil.createDefaultContainer(servletConfig);
-            ContainerUtil.setupDefaultContainer(container, servletConfig);
-
-            WebContextBuilder webContextBuilder = StartupUtil.initWebContext(servletConfig, servletContext, container);
-            StartupUtil.initServerContext(servletConfig, servletContext, container);
-
-            ContainerUtil.prepareForWebContextFilter(servletContext, servletConfig, container, webContextBuilder, null);
-            ContainerUtil.configureContainerFully(container, servletConfig);
-            ContainerUtil.publishContainer(container, servletConfig);
-
-            return container;
-        }
-        catch (ServletException ex)
-        {
-            throw ex;
-        }
-        catch (Exception ex)
-        {
-            throw new ServletException(ex);
-        }
-    }
-
-    /**
-     * Clean up the current thread when {@link #outOfContainerInit()} has been
-     * called.
-     * @param container The container created by {@link #outOfContainerInit()}.
-     */
-    public void outOfContainerDestroy(Container container)
-    {
-        ServletLoggingOutput.unsetExecutionContext();
-
-        WebContextBuilder webContextBuilder = (WebContextBuilder) container.getBean(WebContextBuilder.class.getName());
-        if (webContextBuilder != null)
-        {
-            webContextBuilder.unset();
-        }
-    }
 
     /**
      * Some logging so we have a good clue what we are working with.

@@ -20,8 +20,8 @@ import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.http.HttpSession;
 
 /**
  * For the benefit of anyone that wants to create a fake HttpSession
@@ -49,7 +49,7 @@ public class FakeHttpSession implements HttpSession
     }
 
     /* (non-Javadoc)
-     * @see javax.servlet.http.HttpSession#getCreationTime()
+     * @see jakarta.servlet.http.HttpSession#getCreationTime()
      */
     public long getCreationTime()
     {
@@ -57,7 +57,7 @@ public class FakeHttpSession implements HttpSession
     }
 
     /* (non-Javadoc)
-     * @see javax.servlet.http.HttpSession#getId()
+     * @see jakarta.servlet.http.HttpSession#getId()
      */
     public String getId()
     {
@@ -71,7 +71,7 @@ public class FakeHttpSession implements HttpSession
     }
 
     /* (non-Javadoc)
-     * @see javax.servlet.http.HttpSession#getLastAccessedTime()
+     * @see jakarta.servlet.http.HttpSession#getLastAccessedTime()
      */
     public long getLastAccessedTime()
     {
@@ -79,7 +79,7 @@ public class FakeHttpSession implements HttpSession
     }
 
     /* (non-Javadoc)
-     * @see javax.servlet.http.HttpSession#getServletContext()
+     * @see jakarta.servlet.http.HttpSession#getServletContext()
      */
     public ServletContext getServletContext()
     {
@@ -87,7 +87,7 @@ public class FakeHttpSession implements HttpSession
     }
 
     /* (non-Javadoc)
-     * @see javax.servlet.http.HttpSession#setMaxInactiveInterval(int)
+     * @see jakarta.servlet.http.HttpSession#setMaxInactiveInterval(int)
      */
     public void setMaxInactiveInterval(int maxInactiveInterval)
     {
@@ -95,24 +95,16 @@ public class FakeHttpSession implements HttpSession
     }
 
     /* (non-Javadoc)
-     * @see javax.servlet.http.HttpSession#getMaxInactiveInterval()
+     * @see jakarta.servlet.http.HttpSession#getMaxInactiveInterval()
      */
     public int getMaxInactiveInterval()
     {
         return maxInactiveInterval;
     }
 
-    /**
-     * @see HttpSession#getSessionContext()
-     * @deprecated
-     */
-    public javax.servlet.http.HttpSessionContext getSessionContext()
-    {
-        return null;
-    }
 
     /* (non-Javadoc)
-     * @see javax.servlet.http.HttpSession#getAttribute(java.lang.String)
+     * @see jakarta.servlet.http.HttpSession#getAttribute(java.lang.String)
      */
     public Object getAttribute(String name)
     {
@@ -120,7 +112,7 @@ public class FakeHttpSession implements HttpSession
     }
 
     /* (non-Javadoc)
-     * @see javax.servlet.http.HttpSession#getValue(java.lang.String)
+     * @see jakarta.servlet.http.HttpSession#getValue(java.lang.String)
      */
     public Object getValue(String name)
     {
@@ -128,7 +120,7 @@ public class FakeHttpSession implements HttpSession
     }
 
     /* (non-Javadoc)
-     * @see javax.servlet.http.HttpSession#getAttributeNames()
+     * @see jakarta.servlet.http.HttpSession#getAttributeNames()
      */
     public Enumeration getAttributeNames()
     {
@@ -136,7 +128,7 @@ public class FakeHttpSession implements HttpSession
     }
 
     /* (non-Javadoc)
-     * @see javax.servlet.http.HttpSession#getValueNames()
+     * @see jakarta.servlet.http.HttpSession#getValueNames()
      */
     public String[] getValueNames()
     {
@@ -144,7 +136,7 @@ public class FakeHttpSession implements HttpSession
     }
 
     /* (non-Javadoc)
-     * @see javax.servlet.http.HttpSession#setAttribute(java.lang.String, java.lang.Object)
+     * @see jakarta.servlet.http.HttpSession#setAttribute(java.lang.String, java.lang.Object)
      */
     public void setAttribute(String name, Object value)
     {
@@ -152,7 +144,7 @@ public class FakeHttpSession implements HttpSession
     }
 
     /* (non-Javadoc)
-     * @see javax.servlet.http.HttpSession#putValue(java.lang.String, java.lang.Object)
+     * @see jakarta.servlet.http.HttpSession#putValue(java.lang.String, java.lang.Object)
      */
     public void putValue(String name, Object value)
     {
@@ -160,7 +152,7 @@ public class FakeHttpSession implements HttpSession
     }
 
     /* (non-Javadoc)
-     * @see javax.servlet.http.HttpSession#removeAttribute(java.lang.String)
+     * @see jakarta.servlet.http.HttpSession#removeAttribute(java.lang.String)
      */
     public void removeAttribute(String name)
     {
@@ -168,7 +160,7 @@ public class FakeHttpSession implements HttpSession
     }
 
     /* (non-Javadoc)
-     * @see javax.servlet.http.HttpSession#removeValue(java.lang.String)
+     * @see jakarta.servlet.http.HttpSession#removeValue(java.lang.String)
      */
     public void removeValue(String name)
     {
@@ -176,14 +168,14 @@ public class FakeHttpSession implements HttpSession
     }
 
     /* (non-Javadoc)
-     * @see javax.servlet.http.HttpSession#invalidate()
+     * @see jakarta.servlet.http.HttpSession#invalidate()
      */
     public void invalidate()
     {
     }
 
     /* (non-Javadoc)
-     * @see javax.servlet.http.HttpSession#isNew()
+     * @see jakarta.servlet.http.HttpSession#isNew()
      */
     public boolean isNew()
     {

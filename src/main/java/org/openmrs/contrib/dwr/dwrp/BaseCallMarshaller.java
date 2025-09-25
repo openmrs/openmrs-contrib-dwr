@@ -23,8 +23,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.openmrs.contrib.dwr.ScriptBuffer;
 import org.openmrs.contrib.dwr.WebContext;
@@ -63,7 +63,7 @@ import org.openmrs.contrib.dwr.util.Messages;
 public abstract class BaseCallMarshaller implements Marshaller
 {
     /* (non-Javadoc)
-     * @see org.directwebremoting.extend.Marshaller#marshallInbound(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
+     * @see org.directwebremoting.extend.Marshaller#marshallInbound(jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse)
      */
     public Calls marshallInbound(HttpServletRequest request, HttpServletResponse response) throws IOException, ServerException
     {
@@ -267,7 +267,7 @@ public abstract class BaseCallMarshaller implements Marshaller
     }
 
     /* (non-Javadoc)
-     * @see org.directwebremoting.Marshaller#marshallOutbound(org.directwebremoting.Replies, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
+     * @see org.directwebremoting.Marshaller#marshallOutbound(org.directwebremoting.Replies, jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse)
      */
     public void marshallOutbound(Replies replies, HttpServletRequest request, HttpServletResponse response) throws IOException
     {
@@ -356,7 +356,7 @@ public abstract class BaseCallMarshaller implements Marshaller
     }
 
     /* (non-Javadoc)
-     * @see org.directwebremoting.extend.Marshaller#marshallException(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, java.lang.Exception)
+     * @see org.directwebremoting.extend.Marshaller#marshallException(jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse, java.lang.Exception)
      */
     public void marshallException(HttpServletRequest request, HttpServletResponse response, Exception ex) throws IOException
     {

@@ -17,7 +17,7 @@ package org.openmrs.contrib.dwr;
 
 import java.util.Iterator;
 
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.http.HttpSession;
 
 /**
  * Script scope is like session scope except that it is managed using a

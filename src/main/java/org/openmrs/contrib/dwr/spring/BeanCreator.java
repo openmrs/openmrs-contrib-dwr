@@ -53,7 +53,7 @@ public class BeanCreator extends AbstractCreator implements BeanFactoryAware, In
         }
 
         // make sure to handle cglib proxies correctly
-        if(AopUtils.isCglibProxyClass(this.beanClass)) {
+        if(AopUtils.isCglibProxy(this.beanClass)) {
             this.beanClass = this.beanClass.getSuperclass();
         }
     }

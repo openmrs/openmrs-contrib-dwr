@@ -19,10 +19,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.openmrs.contrib.dwr.WebContextFactory.WebContextBuilder;
 import org.openmrs.contrib.dwr.WebContext;
@@ -312,4 +312,5 @@ public class DwrController extends AbstractController implements BeanNameAware, 
      * The log stream
      */
     private static final Logger log = Logger.getLogger(DwrController.class);
+
 }

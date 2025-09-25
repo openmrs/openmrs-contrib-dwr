@@ -15,8 +15,8 @@
  */
 package org.openmrs.contrib.dwr.impl;
 
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
 
 import org.openmrs.contrib.dwr.Container;
 import org.openmrs.contrib.dwr.ServerContext;
@@ -30,7 +30,7 @@ import org.openmrs.contrib.dwr.util.Logger;
 public class DefaultServerContextBuilder implements ServerContextBuilder
 {
     /* (non-Javadoc)
-     * @see ServerContextBuilder#set(javax.servlet.ServletConfig, javax.servlet.ServletContext, org.directwebremoting.Container)
+     * @see ServerContextBuilder#set(jakarta.servlet.ServletConfig, jakarta.servlet.ServletContext, org.directwebremoting.Container)
      */
     public void set(ServletConfig config, ServletContext context, Container container)
     {

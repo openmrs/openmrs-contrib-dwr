@@ -18,7 +18,7 @@ package org.openmrs.contrib.dwr.dwrp;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.openmrs.contrib.dwr.extend.ConverterManager;
 import org.openmrs.contrib.dwr.extend.EnginePrivate;
