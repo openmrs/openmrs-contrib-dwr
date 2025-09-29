@@ -17,8 +17,8 @@ package org.openmrs.contrib.dwr.impl;
 
 import java.util.Collection;
 
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
 
 import org.openmrs.contrib.dwr.Container;
 import org.openmrs.contrib.dwr.ServerContext;

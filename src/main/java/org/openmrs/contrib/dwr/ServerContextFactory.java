@@ -15,8 +15,8 @@
  */
 package org.openmrs.contrib.dwr;
 
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
 
 /**
  * Accessor for the current ServerContext.

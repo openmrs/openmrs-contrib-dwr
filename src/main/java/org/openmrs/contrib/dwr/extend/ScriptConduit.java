@@ -17,7 +17,7 @@ package org.openmrs.contrib.dwr.extend;
 
 import java.io.IOException;
 
-import javax.servlet.ServletOutputStream;
+import jakarta.servlet.ServletOutputStream;
 
 import org.openmrs.contrib.dwr.ScriptBuffer;
 import org.openmrs.contrib.dwr.util.LocalUtil;

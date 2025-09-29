@@ -17,7 +17,7 @@ package org.openmrs.contrib.dwr.hibernate;
 
 import java.lang.reflect.Method;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 
 import org.openmrs.contrib.dwr.AjaxFilter;
 import org.openmrs.contrib.dwr.AjaxFilterChain;

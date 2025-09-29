@@ -15,10 +15,10 @@
  */
 package org.openmrs.contrib.dwr.impl;
 
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.openmrs.contrib.dwr.Container;
 import org.openmrs.contrib.dwr.WebContext;
@@ -32,7 +32,7 @@ import org.openmrs.contrib.dwr.util.Logger;
 public class DefaultWebContextBuilder implements WebContextBuilder
 {
     /* (non-Javadoc)
-     * @see org.directwebremoting.WebContextBuilder#set(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, javax.servlet.ServletConfig, javax.servlet.ServletContext, org.directwebremoting.Container)
+     * @see org.directwebremoting.WebContextBuilder#set(jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse, jakarta.servlet.ServletConfig, jakarta.servlet.ServletContext, org.directwebremoting.Container)
      */
     public void set(HttpServletRequest request, HttpServletResponse response, ServletConfig config, ServletContext context, Container container)
     {

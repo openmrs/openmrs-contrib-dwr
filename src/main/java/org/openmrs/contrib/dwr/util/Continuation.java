@@ -18,7 +18,7 @@ package org.openmrs.contrib.dwr.util;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 /**
  * A wrapper around Jetty Ajax Continuations

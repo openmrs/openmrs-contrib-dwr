@@ -17,7 +17,7 @@ package org.openmrs.contrib.dwr.hibernate;
 
 import java.beans.PropertyDescriptor;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 
 import org.openmrs.contrib.dwr.WebContextFactory;
 import org.openmrs.contrib.dwr.extend.MarshallException;

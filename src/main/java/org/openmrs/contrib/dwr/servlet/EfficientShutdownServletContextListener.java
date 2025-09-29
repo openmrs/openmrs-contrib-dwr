@@ -17,8 +17,8 @@ package org.openmrs.contrib.dwr.servlet;
 
 import java.util.List;
 
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
 
 import org.openmrs.contrib.dwr.extend.ServerLoadMonitor;
 import org.openmrs.contrib.dwr.impl.ContainerUtil;
@@ -31,14 +31,14 @@ import org.openmrs.contrib.dwr.impl.ContainerUtil;
 public class EfficientShutdownServletContextListener implements ServletContextListener
 {
     /* (non-Javadoc)
-     * @see javax.servlet.ServletContextListener#contextInitialized(javax.servlet.ServletContextEvent)
+     * @see jakarta.servlet.ServletContextListener#contextInitialized(jakarta.servlet.ServletContextEvent)
      */
     public void contextInitialized(ServletContextEvent ev)
     {
     }
 
     /* (non-Javadoc)
-     * @see javax.servlet.ServletContextListener#contextDestroyed(javax.servlet.ServletContextEvent)
+     * @see jakarta.servlet.ServletContextListener#contextDestroyed(jakarta.servlet.ServletContextEvent)
      */
     public void contextDestroyed(ServletContextEvent ev)
     {

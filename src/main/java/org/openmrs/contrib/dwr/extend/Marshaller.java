@@ -17,8 +17,8 @@ package org.openmrs.contrib.dwr.extend;
 
 import java.io.IOException;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 /**
  * A Marshaller is responsible for all the on-the-wire communication between

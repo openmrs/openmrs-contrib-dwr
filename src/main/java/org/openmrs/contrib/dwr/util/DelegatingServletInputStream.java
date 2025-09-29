@@ -16,10 +16,12 @@
 
 package org.openmrs.contrib.dwr.util;
 
+import jakarta.servlet.ReadListener;
+import jakarta.servlet.ServletInputStream;
+
 import java.io.IOException;
 import java.io.InputStream;
 
-import javax.servlet.ServletInputStream;
 
 /**
  * Delegating implementation of ServletInputStream.
@@ -71,4 +73,23 @@ public class DelegatingServletInputStream extends ServletInputStream
     }
 
     private final InputStream proxy;
+
+    @Override
+    public boolean isFinished() {
+        try {
+            return proxy.available() == 0;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public boolean isReady() {
+        return true;
+    }
+
+    @Override
+    public void setReadListener(ReadListener readListener) {
+
+    }
 }

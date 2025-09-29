@@ -16,13 +16,13 @@
 package org.openmrs.contrib.dwr.spring;
 
 import org.openmrs.contrib.dwr.create.AbstractCreator;
-import org.springframework.aop.support.AopUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.FatalBeanException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.util.Assert;
+import org.springframework.util.ClassUtils;
 
 /**
  * A creator that proxies to the specified bean. <br>
@@ -53,7 +53,7 @@ public class BeanCreator extends AbstractCreator implements BeanFactoryAware, In
         }
 
         // make sure to handle cglib proxies correctly
-        if(AopUtils.isCglibProxyClass(this.beanClass)) {
+        if(isCglibProxyClass(this.beanClass)) {
             this.beanClass = this.beanClass.getSuperclass();
         }
     }
@@ -150,6 +150,10 @@ public class BeanCreator extends AbstractCreator implements BeanFactoryAware, In
     {
         this.beanFactory = beanFactory;
         
+    }
+
+    private boolean isCglibProxyClass(Class clazz) {
+        return clazz != null && clazz.getName().contains(ClassUtils.CGLIB_CLASS_SEPARATOR);
     }
     
     /**

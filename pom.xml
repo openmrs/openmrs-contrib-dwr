@@ -8,7 +8,7 @@
     <groupId>org.openmrs.contrib</groupId>
     <artifactId>dwr</artifactId>
     <packaging>jar</packaging>
-    <version>2.0.8-mod-SNAPSHOT</version>
+    <version>3.0.0-SNAPSHOT</version>
     <name>Direct Web Remoting (OpenMRS Modified)</name>
     <url>http://getahead.org/dwr</url>
 
@@ -74,16 +74,9 @@
             </dependency>
 
             <dependency>
-                <groupId>javax.servlet</groupId>
-                <artifactId>jsp-api</artifactId>
-                <version>2.0</version>
-                <scope>provided</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>javax.servlet</groupId>
-                <artifactId>servlet-api</artifactId>
-                <version>2.4</version>
+                <groupId>jakarta.servlet</groupId>
+                <artifactId>jakarta.servlet-api</artifactId>
+                <version>6.1.0</version>
                 <scope>provided</scope>
             </dependency>
 
@@ -172,11 +165,6 @@
                 <version>1.1.2</version>
             </dependency>
 
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring</artifactId>
-                <version>2.0</version>
-            </dependency>
 
             <dependency>
                 <groupId>struts</groupId>
@@ -209,13 +197,8 @@
         </dependency>
 
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jsp-api</artifactId>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
         </dependency>
 
         <dependency>
@@ -259,10 +242,28 @@
 
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring</artifactId>
-            <optional>true</optional>
+            <artifactId>spring-core</artifactId>
+            <version>6.1.5</version>
+            <scope>provided</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>6.1.5</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>6.1.5</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>6.1.5</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>struts</groupId>
             <artifactId>struts</artifactId>

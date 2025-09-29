@@ -24,7 +24,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.StringTokenizer;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 import org.openmrs.contrib.dwr.extend.ServerException;
 import org.openmrs.contrib.dwr.util.LocalUtil;

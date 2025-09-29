@@ -3,7 +3,7 @@ package org.openmrs.contrib.dwr.beehive;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 import org.openmrs.contrib.dwr.WebContextFactory;
 import org.openmrs.contrib.dwr.create.AbstractCreator;

@@ -18,7 +18,7 @@ package org.openmrs.contrib.dwr.create;
 import java.io.File;
 import java.io.RandomAccessFile;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 
 import org.apache.bsf.BSFException;
 import org.apache.bsf.BSFManager;

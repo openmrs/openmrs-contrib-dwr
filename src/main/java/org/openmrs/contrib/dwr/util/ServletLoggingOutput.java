@@ -15,7 +15,7 @@
  */
 package org.openmrs.contrib.dwr.util;
 
-import javax.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServlet;
 
 /**
  * An implementation of LoggingOutput that sends stuff to the Servlet.log
