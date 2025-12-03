@@ -155,7 +155,7 @@ repositories:
 - Git:
     type: git
     url: https://github.com/openmrs/openmrs-contrib-dwr
-    branch: main
+    branch: 2.x
     command-timeout-minutes: '180'
     lfs: 'false'
     verbose-logs: 'true'
