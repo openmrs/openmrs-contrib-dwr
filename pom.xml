@@ -27,9 +27,10 @@
     </licenses>
 
     <scm>
-        <connection>scm:cvs:pserver:guest@cvs.dev.java.net:/cvs:dwr</connection>
-        <developerConnection>scm:cvs:pserver:${maven.username}@cvs.dev.java.net:/cvs:dwr</developerConnection>
-        <url>https://dwr.dev.java.net/source/browse/dwr/</url>
+        <connection>scm:git:git@github.com:openmrs/openmrs-contrib-dwr.git</connection>
+        <developerConnection>scm:git:git@github.com:openmrs/openmrs-contrib-dwr.git</developerConnection>
+        <url>https://github.com/openmrs/openmrs-contrib-dwr.git</url>
+        <tag>HEAD</tag>
     </scm>
 
     <description>
