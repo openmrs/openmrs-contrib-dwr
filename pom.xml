@@ -5,7 +5,7 @@
     <groupId>org.openmrs.contrib</groupId>
     <artifactId>dwr</artifactId>
     <packaging>jar</packaging>
-    <version>2.0.9-mod-SNAPSHOT</version>
+    <version>2.0.8-mod</version>
     <name>Direct Web Remoting (OpenMRS Modified)</name>
     <url>http://getahead.org/dwr</url>
 
@@ -27,7 +27,7 @@
         <connection>scm:git:git@github.com:openmrs/openmrs-contrib-dwr.git</connection>
         <developerConnection>scm:git:git@github.com:openmrs/openmrs-contrib-dwr.git</developerConnection>
         <url>https://github.com/openmrs/openmrs-contrib-dwr.git</url>
-        <tag>HEAD</tag>
+        <tag>dwr-2.0.8-mod</tag>
     </scm>
 
     <description>
