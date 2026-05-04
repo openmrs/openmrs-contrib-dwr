@@ -2,7 +2,7 @@
 version: 2
 plan:
   project-key: CONTRIB
-  key: DWR
+  key: DWR2
   name: OpenMRS DWR 2.x
   description: Plan for the OpenMRS Contrib DWR 2.x branch
 stages:
@@ -162,7 +162,7 @@ other:
 ---
 version: 2
 plan:
-  key: OD2-DWR
+  key: CONTRIB-DWR2
 plan-permissions:
 - roles:
   - anonymous
