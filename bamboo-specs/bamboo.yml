@@ -1,10 +1,10 @@
 ---
 version: 2
 plan:
-  project-key: OD
+  project-key: OD-2
   key: DWR
-  name: OpenMRS DWR Latest
-  description: Plan for the OpenMRS Contrib DWR
+  name: OpenMRS DWR 2.x
+  description: Plan for the OpenMRS Contrib DWR 2.x branch
 stages:
 - Build and Test:
     manual: false
