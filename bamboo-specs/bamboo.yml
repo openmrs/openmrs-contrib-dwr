@@ -87,7 +87,6 @@ Release to maven:
         docker pull ${IMAGE}
 
         docker run \
-          -v m2-repo:/root/.m2/repository \
           -v ~/.m2/settings.xml:/root/.m2/settings.xml:ro \
           -v ${PWD}:/module \
           -v ~/.ssh/github:/root/.ssh:ro \
