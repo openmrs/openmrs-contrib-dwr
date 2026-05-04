@@ -1082,20 +1082,28 @@ dwr.util._addRowInner = function(cellFuncs, options) {
     if (typeof func == 'function') options.data = func(options.rowData, options);
     else options.data = func || "";
     options.cellNum = cellNum;
-    var td = options.cellCreator(options);
-    if (td != null) {
-      if (options.data != null) {
-        if (dwr.util._isHTMLElement(options.data)) td.appendChild(options.data);
-        else {
-          if (dwr.util._shouldEscapeHtml(options) && typeof(options.data) == "string") {
-            td.innerHTML = dwr.util.escapeHtml(options.data);
-          }
+    // If a cell function returned a fully-formed <td>, append it directly.
+    // Going through cellCreator here would return the same node and lead to
+    // td.appendChild(td) when options.data is later re-appended.
+    if (dwr.util._isHTMLElement(options.data, "td")) {
+      tr.appendChild(options.data);
+    }
+    else {
+      var td = options.cellCreator(options);
+      if (td != null) {
+        if (options.data != null) {
+          if (dwr.util._isHTMLElement(options.data)) td.appendChild(options.data);
           else {
-            td.innerHTML = options.data;
+            if (dwr.util._shouldEscapeHtml(options) && typeof(options.data) == "string") {
+              td.innerHTML = dwr.util.escapeHtml(options.data);
+            }
+            else {
+              td.innerHTML = options.data;
+            }
           }
         }
+        tr.appendChild(td);
       }
-      tr.appendChild(td);
     }
   }
   return tr;
