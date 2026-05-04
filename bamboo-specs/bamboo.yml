@@ -130,25 +130,15 @@ variables:
   maven.release.version: 2.0.8-mod
   refapp.distro.property: dwrVersion
 repositories:
-- Git:
-    type: git
-    url: https://github.com/openmrs/openmrs-contrib-dwr
-    branch: main
-    command-timeout-minutes: '180'
-    lfs: 'false'
-    verbose-logs: 'true'
-    use-shallow-clones: 'false'
-    cache-on-agents: 'false'
-    submodules: 'false'
-    ssh-key-applies-to-submodules: 'false'
-    fetch-all: 'false'
+- openmrs-contrib-dwr-2.x:
+    scope: global
 - Release scripts:
     scope: global
 triggers:
 - polling:
     period: '180'
     repositories:
-    - Git
+    - openmrs-contrib-dwr-2.x
 branches:
   create: manually
   delete: never
@@ -172,7 +162,7 @@ other:
 ---
 version: 2
 plan:
-  key: OD-DWR
+  key: OD2-DWR
 plan-permissions:
 - roles:
   - anonymous
