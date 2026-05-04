@@ -94,6 +94,7 @@ Release to maven:
           -e GIT_USER_NAME=$GIT_USER_NAME \
           -e GIT_USER_EMAIL=$GIT_USER_EMAIL \
           -e GIT_SSH_COMMAND='ssh -i /root/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no' \
+          --user $(id -u):$(id -g) \
           --rm \
           -w='/module' \
           ${IMAGE} \
