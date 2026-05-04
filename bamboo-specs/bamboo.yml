@@ -1,7 +1,7 @@
 ---
 version: 2
 plan:
-  project-key: OD
+  project-key: CONTRIB
   key: DWR
   name: OpenMRS DWR Latest
   description: Plan for the OpenMRS Contrib DWR
