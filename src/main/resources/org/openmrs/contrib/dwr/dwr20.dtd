@@ -3,9 +3,11 @@
 
 <!--
 Top level conviguration element.
+OpenMRS merges the dwr config of every started module into one file
+(dwr-modules.xml), so init, allow and signatures can each appear once per module.
 -->
 <!ELEMENT dwr (
-    (init?), (allow?), (signatures?)
+    (init | allow | signatures)*
 )>
 
 <!--
@@ -14,6 +16,13 @@ A list of all the classes to configure as part of dwr at startup time.
 <!ELEMENT init (
     (creator | converter)*
 )>
+<!--
+@attr moduleId The id of the OpenMRS module that added this element to
+dwr-modules.xml, so that it can be removed when that module stops.
+-->
+<!ATTLIST init
+    moduleId CDATA #IMPLIED
+>
 
 <!--
 Define a new method of creating objects for use by Javascript.
@@ -52,6 +61,13 @@ free-for-all will be very dangerous.
 <!ELEMENT allow (
     (create | convert | filter)*
 )>
+<!--
+@attr moduleId The id of the OpenMRS module that added this element to
+dwr-modules.xml, so that it can be removed when that module stops.
+-->
+<!ATTLIST allow
+    moduleId CDATA #IMPLIED
+>
 
 <!--
 Allow the creation of a class, and give it a name in javascript land.
@@ -171,3 +187,10 @@ type information to converters that are unable to tell from reflection what to
 do. This element contains some Java method definitions
 -->
 <!ELEMENT signatures (#PCDATA)>
+<!--
+@attr moduleId The id of the OpenMRS module that added this element to
+dwr-modules.xml, so that it can be removed when that module stops.
+-->
+<!ATTLIST signatures
+    moduleId CDATA #IMPLIED
+>
